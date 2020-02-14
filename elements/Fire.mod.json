@@ -1,0 +1,7 @@
+{
+  "_fv": 5,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"33\"><field name=\"trigger\">On world tick update</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"math_binary_ops\"><field name=\"OP\">GT</field><value name=\"A\"><block type=\"world_data_current_time\"/></value><value name=\"B\"><block type=\"math_number\"><field name=\"NUM\">72000</field></block></value></block></value><statement name=\"DO0\"><block type=\"variables_set_logic\"><field name=\"VAR\">global:OnFire</field><value name=\"VAL\"><block type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></block></value></block></statement></block></next></block></xml>"
+  }
+}

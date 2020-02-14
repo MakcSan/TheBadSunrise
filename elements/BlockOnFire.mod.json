@@ -1,0 +1,7 @@
+{
+  "_fv": 5,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">No additional trigger</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_binary_ops\"><field name=\"OP\">AND</field><value name=\"A\"><block type=\"variables_get_logic\"><field name=\"VAR\">global:OnFire</field></block></value><value name=\"B\"><block type=\"world_data_canseesky\"><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value></block></value></block></value><statement name=\"DO0\"><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_negate\"><value name=\"BOOL\"><block type=\"logic_binary_ops\"><field name=\"OP\">AND</field><value name=\"A\"><block type=\"logic_binary_ops\"><field name=\"OP\">AND</field><value name=\"A\"><block type=\"logic_negate\"><value name=\"BOOL\"><block type=\"world_data_isday\"/></value></block></value><value name=\"B\"><block type=\"world_data_israining\"/></value></block></value><value name=\"B\"><block type=\"world_data_isthundering\"/></value></block></value></block></value><statement name=\"DO0\"><block type=\"entity_set_fire\"><value name=\"seconds\"><block type=\"math_number\"><field name=\"NUM\">5</field></block></value></block></statement></block></statement></block></next></block></xml>"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "badsunrise:blocks/jigsawdirt",
+    "particle": "badsunrise:blocks/jigsawdirt"
+  }
+}
