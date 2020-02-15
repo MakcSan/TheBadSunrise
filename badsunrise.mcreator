@@ -147,6 +147,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "int"
           },
@@ -172,6 +176,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "TheBadSunRise",
+      "type": "achievement",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
@@ -185,9 +197,11 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "advancements.thebadsunrise.descr": "You cannot go outside!!",
       "block.badsunrise.grasstodirt": "Jigsaw Block",
       "item.badsunrise.sunlight": "Sunlight Spawn Egg",
-      "entity.badsunrise.sunlight": "Sunlight"
+      "entity.badsunrise.sunlight": "Sunlight",
+      "advancements.thebadsunrise.title": "The Bad Sun Rise"
     }
   },
   "workspaceSettings": {

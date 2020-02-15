@@ -1,5 +1,7 @@
 {
+  "advancements.thebadsunrise.descr": "You cannot go outside!!",
   "block.badsunrise.grasstodirt": "Jigsaw Block",
   "item.badsunrise.sunlight": "Sunlight Spawn Egg",
-  "entity.badsunrise.sunlight": "Sunlight"
+  "entity.badsunrise.sunlight": "Sunlight",
+  "advancements.thebadsunrise.title": "The Bad Sun Rise"
 }

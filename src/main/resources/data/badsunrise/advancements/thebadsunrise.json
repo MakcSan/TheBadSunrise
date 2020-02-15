@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "badsunrise:textures/transparent.png",
+    "icon": {
+      "item": "minecraft:lava"
+    },
+    "title": {
+      "translate": "advancements.thebadsunrise.title"
+    },
+    "description": {
+      "translate": "advancements.thebadsunrise.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "thebadsunrise": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

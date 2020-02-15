@@ -2,6 +2,7 @@ package net.mcreator.badsunrise;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 @Elementsbadsunrise.ModElement.Tag
@@ -11,6 +12,10 @@ public class MCreatorSunlightOnEntityTickUpdate extends Elementsbadsunrise.ModEl
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			System.err.println("Failed to load dependency entity for procedure MCreatorSunlightOnEntityTickUpdate!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			System.err.println("Failed to load dependency x for procedure MCreatorSunlightOnEntityTickUpdate!");
 			return;
@@ -27,6 +32,7 @@ public class MCreatorSunlightOnEntityTickUpdate extends Elementsbadsunrise.ModEl
 			System.err.println("Failed to load dependency world for procedure MCreatorSunlightOnEntityTickUpdate!");
 			return;
 		}
+		Entity entity = (Entity) dependencies.get("entity");
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
@@ -36,9 +42,12 @@ public class MCreatorSunlightOnEntityTickUpdate extends Elementsbadsunrise.ModEl
 				(int) (y - 1), (int) z))).getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock()) || ((world.getBlockState(new BlockPos(
 				(int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.MYCELIUM.getDefaultState().getBlock()))))) {
 			if ((badsunriseVariables.WorldVariables.get(world).OnFire)) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.FIRE.getDefaultState(), 3);
 				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), MCreatorGrasstoDirt.block.getDefaultState(), 3);
 				world.notifyNeighborsOfStateChange(new BlockPos((int) x, (int) (y - 1), (int) z),
 						world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)).getBlock());
+			} else {
+				entity.remove();
 			}
 		}
 	}
